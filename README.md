@@ -1,24 +1,16 @@
-# event-management
+## Event Management System - Front End
 
-## Project setup
-```
-npm install
-```
+Vue.js front-end for the event management system API ([Link](https://github.com/Lakshan-Madushanka/event-management-system-api "Back-End-API")).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Version - ^3.0.0
+- API - Composition
+- State management - Vuex
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Third party packages
+- [Formik](https://formik.org/ "Formik") - Form validation.
+- [V-Calender](https://vcalendar.io/ "V-Calender") - An elegant calender.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Screen Shots
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
