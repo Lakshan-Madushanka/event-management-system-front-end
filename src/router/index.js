@@ -1,11 +1,26 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import * as guards from "./guards";
+
+const SignIn = () => import("../views/auth/SignIn.vue");
+const SignUp = () => import("../views/auth/SignUp.vue");
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/sign-in",
+    name: "signIn",
+    component: SignIn,
+  },
+  {
+    path: "/sign-out",
+    name: "signUp",
+    component: SignUp,
+    beforeEnter: guards.guest,
   },
   {
     path: "/about",
@@ -19,7 +34,9 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
+  linkActiveClass: "!text-amber-600 underline",
+  linkExactActiveClass: "!text-amber-600 underline",
   routes,
 });
 
