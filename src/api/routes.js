@@ -7,3 +7,6 @@ export const signIn = "login";
 export const signUp = "register";
 export const authUser = "user";
 export const signOut = "logout";
+
+// calander
+export const getHolidaysUrl = "calendar/holidays";

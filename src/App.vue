@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div class="bg-[url('../assets/images/bg.png')] bg-repeat">
     <template v-if="isAppLoading">
       <MainAppLoader />
     </template>
@@ -12,13 +12,14 @@
         :type="alertState.type"
         :message="alertState.message"
       />
+
       <router-view />
     </template>
   </div>
 </template>
 
 <script>
-import { reactive, watch, computed } from "vue";
+import { ref, reactive, watch, computed } from "vue";
 import { useStore } from "vuex";
 import NavBar from "./components/navbar/NavBar.vue";
 import Alert from "./components/alert/Alert.vue";
@@ -34,6 +35,8 @@ export default {
   setup() {
     const store = useStore();
 
+    const date = ref();
+
     const alertState = reactive({
       id: 0,
       type: "",
@@ -41,6 +44,7 @@ export default {
     });
 
     store.dispatch("auth/authUser");
+    store.dispatch("calender/fetchHolidays");
 
     watch(
       () => store.state.alert,
@@ -54,6 +58,7 @@ export default {
     return {
       alertState,
       isAppLoading: computed(() => store.state.isLoading),
+      date,
     };
   },
 };
@@ -65,6 +70,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh;
 }
 
 /* #nav {

@@ -13,6 +13,9 @@
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
     "eslint-plugin-vue": "^9.1.1",
+    "floating-vue": "^2.0.0-beta.17",
+    "moment": "^2.29.3",
+    "v-calendar": "^3.0.0-alpha.8",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

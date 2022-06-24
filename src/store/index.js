@@ -3,6 +3,7 @@ import state from "./state";
 import getters from "./getters";
 import mutations from "./mutations";
 import auth from "./modules/auth";
+import calender from "./modules/calendar";
 
 export default createStore({
   state,
@@ -11,5 +12,6 @@ export default createStore({
   actions: {},
   modules: {
     auth,
+    calender,
   },
 });

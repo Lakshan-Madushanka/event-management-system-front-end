@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-blue-100 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800"
+    class="bg-blue-300 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800"
   >
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <a href="https://flowbite.com" class="flex items-center">
@@ -17,7 +17,7 @@
 
       <NavBarProfileButton />
       <div
-        class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+        class="hidden bg-gray-50 py-3 px-6 justify-between items-center w-full md:flex md:w-auto md:order-1"
         id="mobile-menu-2"
       >
         <NavBarLinks />

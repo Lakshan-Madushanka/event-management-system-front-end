@@ -10,5 +10,5 @@ export const initStates = {
 
 export default {
   alert: initStates.alertInitialState,
-  isLoading: initStates.appInitialState,
+  ...initStates.appInitialState,
 };
